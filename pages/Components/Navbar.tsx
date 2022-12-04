@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <AppBar position="static" color='default'>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <picture>
