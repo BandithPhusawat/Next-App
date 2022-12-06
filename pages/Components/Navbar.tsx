@@ -11,9 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['หน้าหลัก' , 'กิจกรรม' , 'ข้อมูลผลผลิต' , 'ข้อเสนอแนะ'];
+const pages = ['หน้าหลัก' , 'กิจกรรม' , 'ข้อมูลผลผลิต' , 'ระบบข้อมูล' , 'ข้อเสนอแนะ'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -101,7 +99,7 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+       
           <Typography
             variant="h5"
             noWrap
@@ -155,7 +153,7 @@ function Navbar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={handleCloseUserMenu} >
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
