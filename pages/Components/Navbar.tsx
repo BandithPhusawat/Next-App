@@ -11,6 +11,9 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import styles from '../../styles/Main.module.css';
+
+
 const pages = ['หน้าหลัก' , 'กิจกรรม' , 'ข้อมูลผลผลิต' , 'ระบบข้อมูล' , 'ข้อเสนอแนะ'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -34,10 +37,9 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color='default'>
+    <AppBar position="static" color='default' className={styles.navbar}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <picture>
                 <img 
                     src="/images/vegetables.png" 
@@ -93,7 +95,7 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem className={styles.menuItem} key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -133,7 +135,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar className={styles.avatar} alt="Remy Sharp" src="/icon/avatar/user-icon.png" />
               </IconButton>
             </Tooltip>
             <Menu

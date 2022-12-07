@@ -10,18 +10,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(240, 230, 230)
+  background-color: rgb(243, 241, 241)
 }
+
+.navbar {
+  background-color: rgb(202, 243, 179);
+}
+
 
 .footer {
   display: flex;
   flex: 1;
-  padding: .9rem 0;
-  /* border-top: 1px solid #eaeaea; */
+  padding: 1rem 0;
   color: #111;
   justify-content: center;
   align-items: center;
-  background-color: #ffff;
+  color: #020202;
+  background-color: rgb(202, 243, 179);
+  font-family: cursive
 }
 
 .footer a {
@@ -107,8 +113,10 @@
 }
 
 .logo {
-  height: 1em;
+  height: 1.9rem;
+  padding-bottom: 2.2rem;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 600px) {
@@ -127,6 +135,11 @@
     background: #111;
   }
   .logo img {
-    filter: invert(1);
+    /* filter: invert(1); */
   }
+}
+
+
+.avatar {
+  background-color: rgba(229, 250, 201, 0.336);
 }
