@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Navbar() {
+export default function Menu() {
     return (
         <div>
-            Navbar Dashboard !
+            Menu Dashboard !
         </div>
     )
 }

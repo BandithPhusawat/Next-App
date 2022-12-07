@@ -5,16 +5,16 @@
 .main {
   min-height: 100vh;
   padding: 4rem 0;
+  padding-top: 0.1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: black;
   background-color: rgb(243, 241, 241)
 }
 
 .navbar {
-  background-color: rgb(202, 243, 179);
+  background-color: rgb(195, 235, 249);
 }
 
 
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   color: #020202;
-  background-color: rgb(202, 243, 179);
+  background-color: rgba(195, 235, 249);
   font-family: cursive
 }
 
@@ -141,5 +141,5 @@
 
 
 .avatar {
-  background-color: rgba(229, 250, 201, 0.336);
+  /* background-color: rgba(229, 250, 201, 0.336); */
 }
