@@ -38,17 +38,32 @@ const cards = [
         {
           name: 'mushroom_1',
           title: 'โครงการ เห็ดนางฟ้าภูฐาน GAP',
-          description: '',
+          description: 'โครงการเห็ดส่งเสริมการเพาะเห็ดนางฟ้าภูฐาน ในรูปแบบ GAP',
           fileName: 'card_1.jpg'
+        },
+        {
+          name: 'mushroom_2',
+          title: 'โครงการผักปลอดสาร GAP',
+          description: 'โครงการสงเสริมการปลูกแบบอินทรีย์ ในรูปแบบ GAP',
+          fileName: 'card_2.jpg'
+        },
+        {
+          name: 'mushroom_2',
+          title: 'โครงการไก่ไข่',
+          description: '',
+          fileName: 'card_4.jpg'
+        },
+        {
+          name: 'mushroom_2',
+          title: 'โครงการถังหมักแก๊ส จากมูลสัตว์ควาย',
+          description: '',
+          fileName: 'card_5.jpg'
         },
         {
           name: 'mushroom_2',
           title: 'โครงการผักปลอดสาร GAP',
           description: '',
           fileName: 'card_2.jpg'
-        },
-        {
-          
         }
 
 
@@ -60,12 +75,13 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <main>
+      <main style={{ backgroundColor:'rgb(255,250,228)' }}>
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
+            borderRadius: 7,
+            bgcolor: 'rgb(255,251,202)',
+            pt: 5,
             pb: 6,
           }}
         >
@@ -82,8 +98,15 @@ export default function Home() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               โครงการเกษตรปราณีต เพื่อความยั่งยืนของ คนไทย และส่งเสริมคนรุ่นใหม่ที่มีความสนใจ ในการเกษตรอินทรีย์
             </Typography>
+            <Container sx={{ py:1 }} maxWidth="sm">
+                <Grid container spacing={1}>
+                  <Card>
+                    <iframe src="https://giphy.com/embed/I4SIM4anScQLuMcm6Z" width="500" height="250" allowFullScreen></iframe>
+                  </Card>
+                </Grid>
+             </Container>
             <Stack
-              sx={{ pt: 4 }}
+              sx={{ pt: 1 }}
               direction="row"
               spacing={2}
               justifyContent="center"
@@ -102,22 +125,24 @@ export default function Home() {
                   <CardMedia
                     component="img"
                     sx={{
-                        borderRadius: 4,
+                        borderTopLeftRadius: 3,
+                        borderTopRightRadius: 3,
+                        height: 250
                     }}
                     image= { "/images/"+card.fileName}
                     alt={ card.name }
                   />
                   <CardContent sx={{ flexGrow: 1 }} style={{ padding: '1 rem' }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h6" component="h5">
                       <b>{ card.title }</b>
                     </Typography>
                     <Typography>
                       {card.description}
                     </Typography>
+                    <Button>
+                      อ่านต่อ
+                    </Button>
                   </CardContent>
-                  {/* <CardActions>
-                    <Button size="small">อ่านเพิ่ม</Button>
-                  </CardActions> */}
                 </Card>
               </Grid>
             ))}
