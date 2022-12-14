@@ -15,7 +15,7 @@ import styles from '../../styles/Main.module.css';
 
 
 const pages = ['หน้าหลัก' , 'กิจกรรม' , 'พันธมิตร' ,  'ข้อมูลผลผลิต' , 'ระบบข้อมูล' , 'ข้อเสนอแนะ'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['โปรไฟล์', 'ข้อมูลบัญชีผู้ใช้', 'หน้าสรุปผลผลิต', 'ออกจากระบบ'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
