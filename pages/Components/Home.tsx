@@ -16,6 +16,7 @@ import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Image from 'next/image'
 import { padding } from '@mui/system';
+import MiddlewarePlugin from 'next/dist/build/webpack/plugins/middleware-plugin';
 
 function Copyright() {
   return (
@@ -97,7 +98,7 @@ export default function Home() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               โครงการเกษตรปราณีต เพื่อความยั่งยืนของ คนไทย และส่งเสริมคนรุ่นใหม่ที่มีความสนใจ ในการเกษตรอินทรีย์
             </Typography>
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" sx={{ pt: 5 }}>
                 <Grid container spacing={1}>
                   <Card>
                     <Image 
@@ -106,7 +107,7 @@ export default function Home() {
                       width="700"
                       height="400"
                       style={{
-                        margin: "auto",
+                        display: "flex"
                       }}
                     />
                   </Card>
