@@ -14,6 +14,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Image from 'next/image'
+import { padding } from '@mui/system';
 
 function Copyright() {
   return (
@@ -73,14 +75,11 @@ const theme = createTheme();
 
 export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <CssBaseline />
-      <main style={{ backgroundColor:'rgb(255,250,228)' }}>
-        {/* Hero unit */}
         <Box
           sx={{
             borderRadius: 7,
-            bgcolor: 'rgb(255,251,202)',
             pt: 5,
             pb: 6,
           }}
@@ -98,10 +97,18 @@ export default function Home() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               โครงการเกษตรปราณีต เพื่อความยั่งยืนของ คนไทย และส่งเสริมคนรุ่นใหม่ที่มีความสนใจ ในการเกษตรอินทรีย์
             </Typography>
-            <Container sx={{ py:1 }} maxWidth="sm">
+            <Container maxWidth="sm">
                 <Grid container spacing={1}>
                   <Card>
-                    <iframe src="https://giphy.com/embed/I4SIM4anScQLuMcm6Z" width="500" height="250" allowFullScreen></iframe>
+                    <Image 
+                      src='/images/farmerjpg.jpg'
+                      alt='img for landing page'
+                      width="700"
+                      height="400"
+                      style={{
+                        margin: "auto",
+                      }}
+                    />
                   </Card>
                 </Grid>
              </Container>
@@ -148,7 +155,6 @@ export default function Home() {
             ))}
           </Grid>
         </Container>
-      </main>
     </ThemeProvider>
   );
 }
