@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import styles from '../../styles/Main.module.css';
+import styles from '../../../styles/Main.module.css';
 
 
 const pages = ['หน้าหลัก' , 'กิจกรรม' , 'พันธมิตร' ,  'ข้อมูลผลผลิต' , 'ระบบข้อมูล' , 'ข้อเสนอแนะ'];

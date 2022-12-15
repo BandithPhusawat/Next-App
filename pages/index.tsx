@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Main.module.css'
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Layout/Navbar'
+import Footer from './Components/Layout/Footer'
 import HomeComponent from './Components/Home'
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,24 +19,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <span className={styles.logo}>
-          <Image src="/icon/smart-farm.png" alt="Vercel Logo" width={40} height={40} />
-        </span>
-        PH.Farm
-        <span className={styles.logo}>
-          <Image src="/icon/watering.png" alt="Vercel Logo" width={40} height={40} />
-        </span>
-        Smart Famer {' '}
-        <span className={styles.logo}>
-          <Image src="/icon/location.png" alt="Vercel Logo" width={40} height={40} />
-        </span>
-        <span className={styles.logo}>
-          <Image src="/icon/solar-energy.png" alt="Vercel Logo" width={40} height={40} />
-        </span>
-        Smart Farming
-        <span className={styles.logo}>
-          <Image src="/icon/sprout.png" alt="Vercel Logo" width={40} height={40} />
-        </span>
+        <Footer />
       </footer>
     </div>
   )

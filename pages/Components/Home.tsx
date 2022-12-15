@@ -1,9 +1,6 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,8 +12,6 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Image from 'next/image'
-import { padding } from '@mui/system';
-import MiddlewarePlugin from 'next/dist/build/webpack/plugins/middleware-plugin';
 
 function Copyright() {
   return (
@@ -98,13 +93,13 @@ export default function Home() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               โครงการเกษตรปราณีต เพื่อความยั่งยืนของ คนไทย และส่งเสริมคนรุ่นใหม่ที่มีความสนใจ ในการเกษตรอินทรีย์
             </Typography>
-            <Container maxWidth="sm" sx={{ pt: 5 }}>
-                <Grid container spacing={1}>
+            <Container maxWidth="lg" sx={{ pt: 5 }}>
+                <Grid container spacing={0}>
                   <Card>
                     <Image 
                       src='/images/farmerjpg.jpg'
                       alt='img for landing page'
-                      width="700"
+                      width="800"
                       height="400"
                       style={{
                         display: "flex"
