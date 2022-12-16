@@ -9,22 +9,8 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Image from 'next/image'
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const cards = [ 
         {
@@ -119,11 +105,15 @@ export default function Home() {
         </Box>
 
         <Container sx={{ py: 3 }} maxWidth="md">
-          <Grid container spacing={4}>
+          <Grid container spacing={4} >
             {cards.map((card, key) => (
               <Grid item key={key} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , borderRadius: 4 }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' , borderRadius: 4 ,
+                      "&:hover": {
+                        boxShadow: '-1px 10px 29px 0px'
+                      }
+                  }}
                 >
                   <CardMedia
                     component="img"
