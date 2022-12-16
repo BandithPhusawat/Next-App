@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Image from 'next/image'
+import Router from 'next/router';
 
 const cards = [ 
         {
@@ -53,12 +54,19 @@ const cards = [
 
 ];
 
+const handleClickActivites = () => Router.push({
+  pathname: '../Components/Activites'
+})
+
 const theme = createTheme();
 
 export default function Home() {
-  return (
+  return (    
     <ThemeProvider theme={theme} >
       <CssBaseline />
+        <Box>
+          <a onClick={() => handleClickActivites() } >Go to Activites Page</a>
+        </Box>
         <Box
           sx={{
             borderRadius: 7,
@@ -81,7 +89,9 @@ export default function Home() {
             </Typography>
             <Container maxWidth="lg" sx={{ pt: 5 }}>
                 <Grid container spacing={0}>
-                  <Card>
+                  <Card  
+                    sx={{ "&:hover": { boxShadow: '-1px 0px 20px 0px' } }}
+                  >
                     <Image 
                       src='/images/farmerjpg.jpg'
                       alt='img for landing page'
