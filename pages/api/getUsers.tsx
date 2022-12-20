@@ -1,6 +1,6 @@
 import mysql from 'mysql2/promise'
 
-export default async function handler(req, res){ 
+export default async function handler(req: any, res: any){ 
 
     const dbconnection = await mysql.createConnection({
         host: "localhost",
@@ -14,13 +14,13 @@ export default async function handler(req, res){
     try{
 
         const query = "SELECT * FROM users";
-        const values = [];
+        const values : any =  [];
         const [data] = await dbconnection.execute(query, values);
         dbconnection.end();
 
         res.status(200).json({ resules: data });
     }catch(error) {
-        res.status(500).json({ error: error.message })
+        res.status(500).json({ error: error })
     }
 
     // res.status(200).json({ name: "Bandith Phusawat"});

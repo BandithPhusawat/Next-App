@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -61,6 +61,18 @@ const handleClickActivites = () => Router.push({
 const theme = createTheme();
 
 export default function Home() {
+  const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    async function getUserData() {
+      const apiUrlEndPoint = `http://localhost:3000/api/getdata`;
+      const response = await fetch(apiUrlEndPoint);
+      const res = await response.json();
+      console.log(res);
+    }
+    getUserData();
+  }, []);
+
   return (    
     <ThemeProvider theme={theme} >
       <CssBaseline />
