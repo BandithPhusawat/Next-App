@@ -54,10 +54,6 @@ const cards = [
 
 ];
 
-const handleClickActivites = () => Router.push({
-  pathname: '../Components/Activites'
-})
-
 const theme = createTheme();
 
 export default function Home() {
@@ -76,9 +72,6 @@ export default function Home() {
   return (    
     <ThemeProvider theme={theme} >
       <CssBaseline />
-        <Box>
-          <a onClick={() => handleClickActivites() } >Go to Activites Page</a>
-        </Box>
         <Box
           sx={{
             borderRadius: 7,
