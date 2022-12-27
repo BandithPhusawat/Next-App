@@ -37,7 +37,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color='default' className={styles.navbar}>
+    <AppBar position="static" color='default' className={styles.navbar} sx={{ backgroundColor: 'rgb(195, 235, 249)' }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
             <picture>
