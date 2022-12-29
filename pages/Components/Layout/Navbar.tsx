@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,6 +13,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import styles from '../../../styles/Main.module.css';
+
+import Activities from '../Activites';
 
 
 const pages = ['หน้าหลัก' , 'กิจกรรม' , 'พันธมิตร' ,  'ข้อมูลผลผลิต' , 'ระบบข้อมูล' , 'ข้อเสนอแนะ'];
@@ -127,6 +130,7 @@ function Navbar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' , fontSize: '1rem' }}
+                href="/"
               >
                 {page}
               </Button>

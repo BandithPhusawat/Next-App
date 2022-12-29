@@ -1,8 +1,10 @@
 import * as React from 'react'
 
 
-export default function Activities() {
+const Activites = () =>  {
     return <>
         หน้ากิจกรรม
     </>
 }
+
+export default Activites();

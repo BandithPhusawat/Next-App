@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  fname     String
+  Lname     String
+  avatar    String  @db.VarChar(255) @default("userprofile")
+  create_at DateTime
+  update_at DateTime
+  status    status   @default(ACTIVE)
+  system    role     @default(USER)
+}
+
+model Product_list {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(255)
+  detail    String   @db.VarChar(255)
+  weight    Decimal? @db.Decimal(20,2)
+  create_at DateTime
+  update_at DateTime
+}
+
+model Activities {
+  id        Int      @id @default(autoincrement())
+  detail    String   @db.VarChar(255)
+  status    status   @default(ACTIVE)
+  create_at DateTime
+  update_at DateTime
+}
+
+enum role {
+  USER
+  ADMIN
+  SUPER_USER
+}
+
+enum status {
+  ACTIVE
+  NONACTIVE
+}

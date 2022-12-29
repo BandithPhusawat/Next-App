@@ -1,8 +1,11 @@
+
 import Head from 'next/head'
 import styles from '../styles/Main.module.css'
 import Navbar from './Components/Layout/Navbar'
 import Footer from './Components/Layout/Footer'
 import HomeComponent from './Components/Home'
+import { Button } from '@mui/material'
+import { log } from 'console'
 
 export default function Home() {
 
