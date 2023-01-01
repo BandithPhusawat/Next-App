@@ -14,10 +14,28 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import styles from '../../../styles/Main.module.css';
 
-import Activities from '../Activites';
 
+const pages = [ {
+                  title : 'หน้าหลัก',
+                  name : '/'
+                },
+                {
+                  title : 'กิจกรรม',
+                  name : '/activites'
+                },
+                {
+                  title : 'โครงการ',
+                  name :  '/projects'
+                },
+                {
+                  title : 'ข้อมูลผลผลิต',
+                  name : '/product_lists'
+                },
+                {
+                  title  : 'ข้อเสนอแนะ',
+                  name  : '/suggestion'
+                }];
 
-const pages = ['หน้าหลัก' , 'กิจกรรม' , 'พันธมิตร' ,  'ข้อมูลผลผลิต' , 'ระบบข้อมูล' , 'ข้อเสนอแนะ'];
 const settings = ['โปรไฟล์', 'ข้อมูลบัญชีผู้ใช้', 'หน้าสรุปผลผลิต', 'ออกจากระบบ'];
 
 function Navbar() {
@@ -98,9 +116,9 @@ function Navbar() {
                 textTransform: 'uppercase' 
               }}
             >
-              {pages.map((page) => (
-                <MenuItem className={styles.menuItem} key={page} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page, index) => (
+                <MenuItem className={styles.menuItem} key={index} onClick={handleCloseNavMenu} >
+                  <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -125,14 +143,14 @@ function Navbar() {
             B.B.M.
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page,index) => (
               <Button
-                key={page}
+                key={index}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block' , fontSize: '1rem' }}
-                href="/"
+                href={ `${page.name}` }
               >
-                {page}
+                {page.title}
               </Button>
             ))}
           </Box>
