@@ -14,26 +14,25 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import styles from '../../../styles/Main.module.css';
 
-
 const pages = [ {
                   title : 'หน้าหลัก',
-                  name : '/'
+                  part : '/'
                 },
                 {
                   title : 'กิจกรรม',
-                  name : '/activites'
+                  part : '/Components/Activites'
                 },
                 {
                   title : 'โครงการ',
-                  name :  '/projects'
+                  part :  '/Components/projects'
                 },
                 {
                   title : 'ข้อมูลผลผลิต',
-                  name : '/product_lists'
+                  part : '/Components/productLists'
                 },
                 {
                   title  : 'ข้อเสนอแนะ',
-                  name  : '/suggestion'
+                  part  : '/Components/suggestion'
                 }];
 
 const settings = [
@@ -156,14 +155,15 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page,index) => (
-              <Button
-                key={index}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' , fontSize: '1rem' }}
-                href={ `${page.name}` }
-              >
-                {page.title}
-              </Button>
+                <Link
+                  key={index}
+                  onClick={handleCloseNavMenu}
+                  // sx={{ my: 2, color: 'black', display: 'block' , fontSize: '1rem' }}
+                  style={{ color:'black' , display: 'block' , fontSize: '1rem' , padding: '0.5rem'}}
+                  href={ page.part }
+                >
+                  {page.title}
+                </Link>
             ))}
           </Box>
 
