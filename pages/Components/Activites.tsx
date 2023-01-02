@@ -1,10 +1,9 @@
 import * as React from 'react'
+import Navbar from './Layout/Navbar';
 
-
-const Activites = () =>  {
+export default function activites () {
     return <>
-        หน้ากิจกรรม
+        <Navbar />
+        หน้ากิจกรรม !
     </>
 }
-
-export default Activites();

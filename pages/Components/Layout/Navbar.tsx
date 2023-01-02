@@ -36,7 +36,19 @@ const pages = [ {
                   name  : '/suggestion'
                 }];
 
-const settings = ['โปรไฟล์', 'ข้อมูลบัญชีผู้ใช้', 'หน้าสรุปผลผลิต', 'ออกจากระบบ'];
+const settings = [
+                  {
+                    title : 'ข้อมูลผู้ใช้',
+                    part : 'userDashboard'
+                  },
+                  {
+                    title : 'หน้าสรุปผลผลิต',
+                    part : 'dashboard'
+                  },
+                  {
+                    title : 'ออกจากระบบ',
+                    part : 'logout'
+                  }];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -177,9 +189,9 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu} >
-                  <Typography textAlign="center">{setting}</Typography>
+              {settings.map((setting, index) => (
+                <MenuItem key={index} onClick={handleCloseUserMenu} >
+                  <Typography textAlign="center">{setting.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
